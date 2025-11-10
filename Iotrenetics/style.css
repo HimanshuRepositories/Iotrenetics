@@ -10,6 +10,9 @@ body {
   background: #fff;
 }
 
+span{
+  color: red;
+}
 /* Navbar */
 .navbar {
   background: #fff;
@@ -207,6 +210,49 @@ p {
   color: #002e5d;
   margin-bottom: 10px;
 }
+/* CTA section */
+.cta {
+  background: linear-gradient(120deg, #0067b8, #002e5d);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.cta h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: #0067b8;
+}
 /* Footer */
 .footer {
   background: #002e5d;
@@ -218,7 +264,7 @@ p {
 
 /* ------------------ Responsive Media Queries ------------------ */
 
-/* Tablets (≤ 992px) */
+/* Tablets (width ≤ 992px) */
 @media (max-width: 992px) {
   .navbar ul {
     gap: 12px;
@@ -232,6 +278,14 @@ p {
     font-size: 1rem;
   }
 
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
   .mission-grid,
   .partners-grid,
   .grid {
@@ -239,7 +293,7 @@ p {
   }
 }
 
-/* Mobiles (≤ 768px) */
+/* Mobile Devices (width ≤ 768px) */
 @media (max-width: 768px) {
   .navbar .container {
     flex-direction: column;
@@ -271,23 +325,38 @@ p {
     font-size: 0.95rem;
   }
 
+  .cta {
+    padding: 70px 15px;
+  }
+
+  .cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .partners p,
   .mission p {
     font-size: 0.95rem;
   }
 }
 
-/* Small Phones (≤ 480px) */
+/* Small Phones (width ≤ 480px) */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 1.5rem;
   }
 
-  .hero p {
+  .hero p,
+  .cta p {
     font-size: 0.9rem;
   }
 
-  .btn-primary {
+  .btn-primary,
+  .btn-secondary {
     padding: 8px 18px;
     font-size: 0.9rem;
   }
@@ -298,6 +367,8 @@ p {
     padding: 18px;
   }
 }
+
+
 
 
 
